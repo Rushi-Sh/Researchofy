@@ -108,5 +108,5 @@
 
 /* Profile Image */
 .profile-image {
-    @apply h-10 w-10 rounded-full ring-2 ring-gray-300;
+    @apply h-13 w-13;
 }
