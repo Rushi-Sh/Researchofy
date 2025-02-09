@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-dmsans: "DM Sans", serif;
+    --font-kanit: "Kanit", serif;
+}
+
+.kanit-light-italic {
+    font-family: var(--font-kanit);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Navbar Container */
+.nav-container {
+    @apply bg-gray-800;
+}
+
+.nav-wrapper {
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+}
+
+.nav-content {
+    @apply relative flex h-16 items-center justify-between;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button-wrapper {
+    @apply absolute inset-y-0 left-0 flex items-center sm:hidden;
+}
+
+.mobile-menu-button {
+    @apply relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    @apply flex flex-1 items-center justify-start;
+}
+
+/* Logo Section */
+.logo-container {
+    @apply flex flex-shrink-0 items-center;
+}
+
+.logo-link {
+    @apply flex items-center;
+}
+
+.logo-image {
+    @apply h-8 w-auto;
+}
+
+.logo-text {
+    @apply ml-2 text-white text-lg font-semibold hidden sm:block;
+}
+
+/* Navigation Items */
+.nav-items-container {
+    @apply hidden sm:ml-16 sm:mr-10 sm:block;
+}
+
+.nav-items {
+    @apply flex space-x-6;
+}
+
+/* Updated nav-link for dropdown compatibility */
+.nav-link {
+    @apply rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200;
+}
+
+/* Dropdown Styles */
+.dropdown-button {
+    @apply flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200;
+}
+
+.dropdown-menu {
+    @apply absolute left-0 mt-2 w-48 rounded-md bg-gray-800 ring-1 ring-black shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right;
+}
+
+.dropdown-item {
+    @apply block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200;
+}
+
+/* Connect Button */
+.connect-button {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    @apply sm:hidden;
+}
+
+.mobile-nav-items {
+    @apply space-y-1 px-2 pt-2 pb-3 bg-gray-800;
+}
+
+.mobile-nav-link {
+    @apply block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200;
+}
+
+/* Mobile Dropdown Items */
+.mobile-dropdown-item {
+    @apply block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200 pl-6;
+}
+
+/* Profile Image */
+.profile-image {
+    @apply h-10 w-10 rounded-full ring-2 ring-gray-300;
+}
