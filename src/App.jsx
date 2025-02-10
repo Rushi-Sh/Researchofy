@@ -1,9 +1,13 @@
 import React from 'react'
 import NavBar from './components/NavBar'
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
     return (
         <main>
+
+            <Analytics/>
+
             <NavBar/>
 
             <section>
