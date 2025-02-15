@@ -1,6 +1,8 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import { Analytics } from "@vercel/analytics/react"
+import Home from './sections/Home'
+import FAQ from './sections/FAQ'
 
 const App = () => {
     return (
@@ -11,7 +13,7 @@ const App = () => {
             <NavBar/>
 
             <section>
-                Home
+                <Home/>
             </section>
 
             <section>
@@ -36,6 +38,10 @@ const App = () => {
 
             <section>
                 Contact Us
+            </section>
+
+            <section>
+                <FAQ/>
             </section>
         </main>
     )

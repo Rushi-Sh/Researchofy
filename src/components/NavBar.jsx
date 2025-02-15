@@ -19,7 +19,7 @@ const NavBar = () => {
     ];
 
     return (
-        <header className="font-dmsans">
+        <header className="font-dmsans fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <nav className="nav-container">
                 <div className="nav-wrapper">
                     <div className="nav-content">
