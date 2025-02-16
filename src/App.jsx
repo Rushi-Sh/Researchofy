@@ -16,7 +16,7 @@ const App = () => {
                 <Home/>
             </section>
 
-            <section>
+            {/* <section>
                 About Us
             </section>
 
@@ -42,7 +42,7 @@ const App = () => {
 
             <section>
                 <FAQ/>
-            </section>
+            </section> */}
         </main>
     )
 }
