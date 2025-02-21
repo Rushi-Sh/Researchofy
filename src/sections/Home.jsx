@@ -5,10 +5,9 @@ import Home3 from "./Home Parts/Home3";
 import Home4 from "./Home Parts/Home4";
 import Footer from "./Home Parts/Footer";
 
-
 const Home = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       {/* First Section */}
       <section className="min-h-screen w-full relative flex items-center justify-center">
         <Home1 />
@@ -30,7 +29,6 @@ const Home = () => {
       <section className="w-full relative">
         <Footer />
       </section>
-
     </div>
   );
 };
