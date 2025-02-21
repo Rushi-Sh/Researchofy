@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import HomePageContent from '../index';
+import Content from '../index';
 
 const Home2 = () => {
-  const firstContent = HomePageContent[0];
+
+  const {HomePageContent} = Content
+  const firstContent = HomePageContent[0] ;
 
   return (
     <div className="min-h-screen w-full relative bg-gradient-to-b from-white to-gray-50">
