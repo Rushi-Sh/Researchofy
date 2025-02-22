@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { logo } from '../assets/images';
 import { profile } from '../assets/icons';
 import { ChevronDown } from 'lucide-react';
@@ -7,15 +8,15 @@ const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const servicesDropdown = [
-        { title: 'Research Writing', href: '/services/research' },
-        { title: 'Data Analysis', href: '/services/analysis' },
-        { title: 'Consulting', href: '/services/consulting' }
+        { title: 'Research Writing', href: '/sections/Services/ResearchWriting' },
+        { title: 'Data Analysis', href: '/sections/Services/DataAnalytics' },
+        { title: 'Consulting', href: '/sections/Services/Consulting' }
     ];
 
     const projectsDropdown = [
-        { title: 'Case Studies', href: '/projects/case-studies' },
-        { title: 'Publications', href: '/projects/publications' },
-        { title: 'Research Papers', href: '/projects/papers' }
+        { title: 'Case Studies', href: '/sections/OurProject/CaseStudies' },
+        { title: 'Publications', href: '/sections/OurProject/Publications' },
+        { title: 'Research Papers', href: '/sections/OurProject/ResearchPaper' }
     ];
 
     return (
@@ -40,17 +41,17 @@ const NavBar = () => {
                         <div className="desktop-nav">
                             {/* Logo */}
                             <div className="logo-container">
-                                <a href="/" className="logo-link">
+                                <Link to="/" className="logo-link">
                                     <img className="logo-image" src={logo} alt="Research Service Logo" />
                                     <span className="logo-text kanit-light-italic">Researchofy</span>
-                                </a>
+                                </Link>
                             </div>
 
                             {/* Navigation items */}
                             <div className="nav-items-container">
                                 <div className="nav-items">
-                                    <a href="/" className="nav-link">Home</a>
-                                    <a href="/about-us" className="nav-link">About Us</a>
+                                    <Link to="/sections/HomeParts/Home" className="nav-link">Home</Link>
+                                    <Link to="/sections/AboutUs/About" className="nav-link">About Us</Link>
                                     
                                     {/* Services Dropdown */}
                                     <div className="relative group">
@@ -60,13 +61,13 @@ const NavBar = () => {
                                         </button>
                                         <div className="dropdown-menu">
                                             {servicesDropdown.map((item) => (
-                                                <a
+                                                <Link
                                                     key={item.href}
-                                                    href={item.href}
+                                                    to={item.href}
                                                     className="dropdown-item"
                                                 >
                                                     {item.title}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -79,19 +80,19 @@ const NavBar = () => {
                                         </button>
                                         <div className="dropdown-menu">
                                             {projectsDropdown.map((item) => (
-                                                <a
+                                                <Link
                                                     key={item.href}
-                                                    href={item.href}
+                                                    to={item.href}
                                                     className="dropdown-item"
                                                 >
                                                     {item.title}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <a href="/blog" className="nav-link">Blog</a>
-                                    <a href="/contact-us" className="nav-link">Contact Us</a>
+                                    <Link to="/sections/Blog/Blog" className="nav-link">Blog</Link>
+                                    <Link to="/sections/ContactUs/Contact" className="nav-link">Contact Us</Link>
                                 </div>
                             </div>
                         </div>
@@ -109,28 +110,28 @@ const NavBar = () => {
                 {/* Mobile menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'block' : 'hidden'}`}>
                     <div className="mobile-nav-items">
-                        <a href="/" className="mobile-nav-link">Home</a>
-                        <a href="/about-us" className="mobile-nav-link">About Us</a>
+                        <Link to="/sections/HomeParts/Home" className="mobile-nav-link">Home</Link>
+                        <Link to="/sections/AboutUs/About" className="mobile-nav-link">About Us</Link>
                         {servicesDropdown.map((item) => (
-                            <a
+                            <Link
                                 key={item.href}
-                                href={item.href}
+                                to={item.href}
                                 className="mobile-dropdown-item"
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         ))}
                         {projectsDropdown.map((item) => (
-                            <a
+                            <Link
                                 key={item.href}
-                                href={item.href}
+                                to={item.href}
                                 className="mobile-dropdown-item"
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         ))}
-                        <a href="/blog" className="mobile-nav-link">Blog</a>
-                        <a href="/contact-us" className="mobile-nav-link">Contact Us</a>
+                        <Link to="/sections/Blog/Blog" className="mobile-nav-link">Blog</Link>
+                        <Link to="/sections/ContactUs/Contact" className="mobile-nav-link">Contact Us</Link>
                     </div>
                 </div>
             </nav>

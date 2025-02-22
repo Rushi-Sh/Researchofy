@@ -1,9 +1,9 @@
 import React from "react";
-import Home1 from "./Home Parts/Home1";
-import Home2 from "./Home Parts/Home2";
-import Home3 from "./Home Parts/Home3";
-import Home4 from "./Home Parts/Home4";
-import Footer from "./Home Parts/Footer";
+import Home1 from "./Home1";
+import Home2 from "./Home2";
+import Home3 from "./Home3";
+import Home4 from "./Home4";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
