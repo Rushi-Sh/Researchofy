@@ -166,17 +166,17 @@ const FooterContent = [
         section: "Quick Links",
         links: [
             { title: "Home", href: "/" },
-            { title: "About Us", href: "/sections/AboutUs/About" },
-            { title: "Services", href: "/sections/Services" },
-            { title: "FAQ", href: "/sections/FAQ" },
+            { title: "About Us", href: "/about" },
+            { title: "Services", href: "/services" },
+            { title: "FAQ", href: "/faq" },
         ]
     },
     {
         section: "Projects",
         links: [
-            { title: "Case Studies", href: "/sections/OurProject/CaseStudies" },
-            { title: "Publications", href: "/sections/OurProject/Publications" },
-            { title: "Research Papers", href: "/sections/OurProject/ResearchPaper" }
+            { title: "Case Studies", href: "/casestudies" },
+            { title: "Publications", href: "/publications" },
+            { title: "Research Papers", href: "/research-paper" }
         ]
     },
     {
@@ -188,7 +188,6 @@ const FooterContent = [
         }
     }
 ];
-
 
 const Content = {
     HomePageContent,

@@ -6,11 +6,12 @@ import { ChevronDown } from 'lucide-react';
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const projectsDropdown = [
-        { title: 'Case Studies', href: '/sections/OurProject/CaseStudies' },
-        { title: 'Publications', href: '/sections/OurProject/Publications' },
-        { title: 'Research Papers', href: '/sections/OurProject/ResearchPaper' }
+        { title: 'Case Studies', href: '/case-studies' },
+        { title: 'Publications', href: '/publications' },
+        { title: 'Research Papers', href: '/research-paper' }
     ];
 
     return (
@@ -44,17 +45,20 @@ const NavBar = () => {
                             {/* Navigation items */}
                             <div className="nav-items-container">
                                 <div className="nav-items">
-                                    <Link to="/sections/HomeParts/Home" className="nav-link">Home</Link>
-                                    <Link to="/sections/AboutUs/About" className="nav-link">About Us</Link>
-                                    <Link to="/sections/Services/Services" className="nav-link">Services</Link>
+                                    <Link to="/" className="nav-link">Home</Link>
+                                    <Link to="/about" className="nav-link">About Us</Link>
+                                    <Link to="/services" className="nav-link">Services</Link>
                                     
                                     {/* Projects Dropdown */}
                                     <div className="relative group">
-                                        <button className="dropdown-button">
+                                        <button 
+                                            className="dropdown-button"
+                                            onClick={() => setDropdownOpen(!dropdownOpen)}
+                                        >
                                             Projects
                                             <ChevronDown className="ml-1 h-4 w-4" />
                                         </button>
-                                        <div className="dropdown-menu">
+                                        <div className={`dropdown-menu ${dropdownOpen ? 'block' : 'hidden'}`}>
                                             {projectsDropdown.map((item) => (
                                                 <Link
                                                     key={item.href}
@@ -67,7 +71,7 @@ const NavBar = () => {
                                         </div>
                                     </div>
 
-                                    <Link to="/sections/FAQ/FAQ" className="nav-link">FAQ</Link>
+                                    <Link to="/faq" className="nav-link">FAQ</Link>
                                 </div>
                             </div>
                         </div>
@@ -85,9 +89,9 @@ const NavBar = () => {
                 {/* Mobile menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'block' : 'hidden'}`}>
                     <div className="mobile-nav-items">
-                        <Link to="/sections/HomeParts/Home" className="mobile-nav-link">Home</Link>
-                        <Link to="/sections/AboutUs/About" className="mobile-nav-link">About Us</Link>
-                        <Link to="/sections/Services/Services" className="mobile-nav-link">Services</Link>
+                        <Link to="/" className="mobile-nav-link">Home</Link>
+                        <Link to="/about" className="mobile-nav-link">About Us</Link>
+                        <Link to="/services" className="mobile-nav-link">Services</Link>
                         {projectsDropdown.map((item) => (
                             <Link
                                 key={item.href}
@@ -97,7 +101,7 @@ const NavBar = () => {
                                 {item.title}
                             </Link>
                         ))}
-                        <Link to="/sections/FAQ/FAQ" className="mobile-nav-link">FAQ</Link>
+                        <Link to="/faq" className="mobile-nav-link">FAQ</Link>
                     </div>
                 </div>
             </nav>
