@@ -167,8 +167,8 @@ const FooterContent = [
         links: [
             { title: "Home", href: "/" },
             { title: "About Us", href: "/sections/AboutUs/About" },
-            { title: "Services", href: "/sections/Services/Services" },
-            { title: "FAQ", href: "/sections/FAQ/FAQ" },
+            { title: "Services", href: "/sections/Services" },
+            { title: "FAQ", href: "/sections/FAQ" },
         ]
     },
     {
