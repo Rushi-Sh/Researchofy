@@ -7,12 +7,6 @@ import { ChevronDown } from 'lucide-react';
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const servicesDropdown = [
-        { title: 'Research Writing', href: '/sections/Services/ResearchWriting' },
-        { title: 'Data Analysis', href: '/sections/Services/DataAnalytics' },
-        { title: 'Consulting', href: '/sections/Services/Consulting' }
-    ];
-
     const projectsDropdown = [
         { title: 'Case Studies', href: '/sections/OurProject/CaseStudies' },
         { title: 'Publications', href: '/sections/OurProject/Publications' },
@@ -52,26 +46,8 @@ const NavBar = () => {
                                 <div className="nav-items">
                                     <Link to="/sections/HomeParts/Home" className="nav-link">Home</Link>
                                     <Link to="/sections/AboutUs/About" className="nav-link">About Us</Link>
+                                    <Link to="/sections/Services/Services" className="nav-link">Services</Link>
                                     
-                                    {/* Services Dropdown */}
-                                    <div className="relative group">
-                                        <button className="dropdown-button">
-                                            Services
-                                            <ChevronDown className="ml-1 h-4 w-4" />
-                                        </button>
-                                        <div className="dropdown-menu">
-                                            {servicesDropdown.map((item) => (
-                                                <Link
-                                                    key={item.href}
-                                                    to={item.href}
-                                                    className="dropdown-item"
-                                                >
-                                                    {item.title}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-
                                     {/* Projects Dropdown */}
                                     <div className="relative group">
                                         <button className="dropdown-button">
@@ -91,8 +67,7 @@ const NavBar = () => {
                                         </div>
                                     </div>
 
-                                    <Link to="/sections/Blog/Blog" className="nav-link">Blog</Link>
-                                    <Link to="/sections/ContactUs/Contact" className="nav-link">Contact Us</Link>
+                                    <Link to="/sections/FAQ/FAQ" className="nav-link">FAQ</Link>
                                 </div>
                             </div>
                         </div>
@@ -112,15 +87,7 @@ const NavBar = () => {
                     <div className="mobile-nav-items">
                         <Link to="/sections/HomeParts/Home" className="mobile-nav-link">Home</Link>
                         <Link to="/sections/AboutUs/About" className="mobile-nav-link">About Us</Link>
-                        {servicesDropdown.map((item) => (
-                            <Link
-                                key={item.href}
-                                to={item.href}
-                                className="mobile-dropdown-item"
-                            >
-                                {item.title}
-                            </Link>
-                        ))}
+                        <Link to="/sections/Services/Services" className="mobile-nav-link">Services</Link>
                         {projectsDropdown.map((item) => (
                             <Link
                                 key={item.href}
@@ -130,8 +97,7 @@ const NavBar = () => {
                                 {item.title}
                             </Link>
                         ))}
-                        <Link to="/sections/Blog/Blog" className="mobile-nav-link">Blog</Link>
-                        <Link to="/sections/ContactUs/Contact" className="mobile-nav-link">Contact Us</Link>
+                        <Link to="/sections/FAQ/FAQ" className="mobile-nav-link">FAQ</Link>
                     </div>
                 </div>
             </nav>

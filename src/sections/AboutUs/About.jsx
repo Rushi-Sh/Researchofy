@@ -1,6 +1,5 @@
 import React from 'react';
 import Content from '../index';
-import { motion } from 'framer-motion';
 
 const About = () => {
   const { AboutUsContent } = Content;

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FooterContent.map((section, index) => (
             <div key={index} className="space-y-4">
               <h3 className="text-lg font-semibold text-white">{section.section}</h3>
@@ -31,7 +31,7 @@ const Footer = () => {
               {section.details && (
                 <div className="space-y-3">
                   <p className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-purple-400" />
+                    <MapPin className="h-10 w-10 text-purple-400" />
                     {section.details.address}
                   </p>
                   <p className="flex items-center gap-2">

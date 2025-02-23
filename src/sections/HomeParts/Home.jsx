@@ -3,7 +3,6 @@ import Home1 from "./Home1";
 import Home2 from "./Home2";
 import Home3 from "./Home3";
 import Home4 from "./Home4";
-import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -26,9 +25,7 @@ const Home = () => {
         <Home4 />
       </section>
       
-      <section className="w-full relative">
-        <Footer />
-      </section>
+      
     </div>
   );
 };
