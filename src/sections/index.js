@@ -166,10 +166,9 @@ const FooterContent = [
         section: "Quick Links",
         links: [
             { title: "Home", href: "/" },
-            { title: "About Us", href: "/AboutUs/About" },
-            { title: "Blog", href: "Blog/Blog" },
-            { title: "Contact Us", href: "/ContactUs/Contact" },
-            { title: "Services", href: "/Services/Services" }
+            { title: "About Us", href: "/sections/AboutUs/About" },
+            { title: "Services", href: "/sections/Services/Services" },
+            { title: "FAQ", href: "/sections/FAQ/FAQ" },
         ]
     },
     {

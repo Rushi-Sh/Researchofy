@@ -9,7 +9,7 @@ import CaseStudies from './sections/OurProject/CaseStudies';
 import Publications from './sections/OurProject/Publications';
 import ResearchPaper from './sections/OurProject/ResearchPaper';
 import FAQ from './sections/FAQ/FAQ';
-import Footer from './sections/HomeParts/Footer';
+import Footer from './sections/Footer/Footer';
 
 const App = () => {
     return (
