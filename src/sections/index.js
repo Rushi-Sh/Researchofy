@@ -174,9 +174,9 @@ const FooterContent = [
     {
         section: "Projects",
         links: [
-            { title: "Case Studies", href: "/OurProject/CaseStudies" },
-            { title: "Publications", href: "/OurProject/Publications" },
-            { title: "Research Papers", href: "/OurProject/ResearchPaper" }
+            { title: "Case Studies", href: "/sections/OurProject/CaseStudies" },
+            { title: "Publications", href: "/sections/OurProject/Publications" },
+            { title: "Research Papers", href: "/sections/OurProject/ResearchPaper" }
         ]
     },
     {
@@ -188,6 +188,7 @@ const FooterContent = [
         }
     }
 ];
+
 
 const Content = {
     HomePageContent,
